@@ -7,23 +7,33 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of WiFi mi
 
 * Secure connections using TLS 1.2
 * FreeRTOS as the underlying real time operating system
+* WiFi station and soft AP support
 * lwIP open source TCP/IP stack
 * MQTT client for real time communication with brokers
-* Soft AP for provisioning
 * Supported on Windows, Linux, OS X operating systems
 
+### Get the SDK
 
-## Hardware specs
+ [ Download .zip >][download] or use git
+
+    git clone https://github.com/marvell-iot/aws_starter_sdk
+
+
+[download]: https://github.com/marvell-iot/aws_starter_sdk/archive/master.zip
+
+
+## SoC specs
 
 * 32-bit Cortex M4F
 * Upto 200Mhz
 * 512KB SRAM
-* Flash with [XIP](https://en.wikipedia.org/wiki/Execute_in_place) support
-* 802.11 b/g/n with FCC, IC, CE certification
-* UART, SSP, I2C, PWM, ADC, DAC, and USB(only for 88MW302)
+* [XIP](https://en.wikipedia.org/wiki/Execute_in_place) support with external QSPI flash
+* 802.11 b/g/n
+* UART, SSP, I2C, PWM/GPT, ADC, DAC, and USB-OTG(only for 88MW302)
+* [Product details](http://www.marvell.com/microcontrollers/88MW300/302/)
 
 
-## Dev Boards
+### Get the development boards
 
 |Name|Link|
 |:-:|:-:|

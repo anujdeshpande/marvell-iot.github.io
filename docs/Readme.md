@@ -62,3 +62,74 @@ Whenever an application firmware is built, two kinds of artifacts are created
 
 - **hello_world.axf:** This is a firmware image that can directly be loaded into the SRAM of the micro-controller using the ```ramload.py``` program. Since the firmware image is not written to flash, this operation is faster. This is commonly used for iterative development.
 - **hello_world.bin:** This is a firmware image that can be flashed on to the starter kit. This is commonly used as the default firmware that gets executed on boot up.
+
+## Uploading your code
+
+There are 2 ways of executing your code on the micro-controller boards.
+
+- RAM load
+- Flash load
+
+When you compile an application, a `.axf`, `.map`, and `.bin` are created.
+
+```
+$ make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c  
+
+make[1]: Entering directory '/home/user/ez-connect-lite'
+ [cc] /home/user/ez-connect-lite/sdk/src/boards/knit-v1.c
+ [axf] /home/user/ez-connect-lite/bin/knit-v1/hello_world.axf
+ [map] /home/user/ez-connect-lite/bin/knit-v1/hello_world.map
+ [bin] /home/user/ez-connect-lite/bin/knit-v1/hello_world.bin
+
+make[1]: Leaving directory '/home/user/ez-connect-lite'
+
+```
+
+
+Let's take a closer look at how to use these files to run your application on the development boards -
+
+### RAM load
+
+We will be using the `ramload.py` python script that can be found in the `sdk/tools/OpenOCD` directory.
+
+```
+$ python sdk/tools/OpenOCD/ramload.py --help
+
+Usage:
+sdk/tools/OpenOCD/ramload.py <app.axf> [options]
+Optional Usage:
+ [<-i | --interface> <JTAG hardware interface name>]
+          Supported ones are ftdi and stlink. Default is ftdi.
+ [-s | --semihosting]
+          Enable semihosting based console output
+ [-h | --help]
+          Display usage
+
+```
+
+
+### Flash load
+
+We will be using the `flash.py` python script that can be found in the `sdk/tools/OpenOCD` directory.
+
+```
+$ python sdk/tools/OpenOCD/flash.py --help
+
+Usage:
+sdk/tools/OpenOCD/flash.py [options]
+Optional Usage:
+ [<-i | --interface> <JTAG hardware interface name>]
+          Supported ones are ftdi and stlink. Default is ftdi.
+ [--mcufw </path/to/mcufw>]
+          Write MCU firmware binary <bin> to flash
+ [<-f | --flash> </path/to/flash_blob>]
+          Program entire flash
+ [-r | --reset]
+          Reset board
+ [-h | --help]
+          Display usage
+```
+
+## Tutorials
+
+- [Develop applications using the SDK]()

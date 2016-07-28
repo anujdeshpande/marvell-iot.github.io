@@ -16,10 +16,10 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of WiFi mi
 
  [ Download .zip >][download] or use git
 
-    git clone https://github.com/marvell-iot/aws_starter_sdk
+    git clone https://github.com/marvell-iot/ez-connect-lite
 
 
-[download]: https://github.com/marvell-iot/aws_starter_sdk/archive/master.zip
+[download]: https://github.com/marvell-iot/ez-connect-lite/archive/master.zip
 
 
 ## SoC specs
@@ -48,5 +48,5 @@ You can find instructions on setting up your development host, flashing boards, 
 
 ## Support
 
-- [![Join the chat at https://gitter.im/marvell-iot/aws_starter_sdk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marvell-iot/aws_starter_sdk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-- [GitHub Issues](https://github.com/marvell-iot/aws_starter_sdk/issues)
+- [![Join the chat at https://gitter.im/marvell-iot/ez-connect-lite](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marvell-iot/ez-connect-lite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+- [GitHub Issues](https://github.com/marvell-iot/ez-connect-lite/issues)

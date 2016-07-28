@@ -5,10 +5,10 @@
 
  [ Download .zip >][download] or use git
 
-    git clone https://github.com/marvell-iot/aws_starter_sdk
+    git clone https://github.com/marvell-iot/ez-connect-lite
 
 
-[download]: https://github.com/marvell-iot/aws_starter_sdk/archive/master.zip
+[download]: https://github.com/marvell-iot/ez-connect-lite/archive/master.zip
 
 ## Setup development host
 
@@ -17,3 +17,48 @@ The following operating systems are supported -
 - [Windows](./windows-host-setup/)
 - [Linux](./linux-host-setup/)
 - [Mac](./mac-host-setup/)
+
+## Install ARM cross-compiler toolchain
+
+Apart from installing development host specific drivers and packages as mentioned above, an ARM cross-compiler toolchain should be installed on the development host. The EZ-Connect Lite SDK supports the GCC Compiler Toolchain.
+
+The toolchain for GNU ARM is available from: https://launchpad.net/gcc-arm-embedded
+
+Make sure that the toolchain is added to your environment path.
+
+```
+$ arm-none-eabi-gcc --version
+arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.9.3 20150529 (release) [ARM/embedded-4_9-branch revision 227977]
+Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+```
+
+## Building the SDK and applications
+
+The following command builds the entire SDK including all the libraries and sample applications:
+
+```
+$ cd ez-connect-lite
+$ make
+```
+
+You could compile individual sample application by passing the ```APP=``` parameter to ```make```.
+
+```
+$ make APP=sample_apps/hello_world
+```
+
+To build applications for a particular development board, pass the ```BOARD_FILE=``` parameter to ```make```
+
+```
+$ make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c
+```
+
+## Firmware Variants
+
+Whenever an application firmware is built, two kinds of artifacts are created
+
+- **hello_world.axf:** This is a firmware image that can directly be loaded into the SRAM of the micro-controller using the ```ramload.py``` program. Since the firmware image is not written to flash, this operation is faster. This is commonly used for iterative development.
+- **hello_world.bin:** This is a firmware image that can be flashed on to the starter kit. This is commonly used as the default firmware that gets executed on boot up.

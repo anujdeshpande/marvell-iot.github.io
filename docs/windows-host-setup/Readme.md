@@ -12,16 +12,16 @@
 - Clone Marvell's Starter SDK for AWS
 
 
-      git clone https://github.com/marvell-iot/aws_starter_sdk.git
+      git clone https://github.com/marvell-iot/ez-connect-lite.git
 
 * Get OpenOCD 0.9.0 for Windows from [here](http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0)
 
-* Unzip the OpenOCD tarball and copy the contents of bin/ folder (for 32-bit Windows machines) or bin-x64/ folder (for 64-bit Windows machines) to __aws_starter_sdk/wmsdk/tools/OpenOCD/Windows__ folder.
+* Unzip the OpenOCD tarball and copy the contents of bin/ folder (for 32-bit Windows machines) or bin-x64/ folder (for 64-bit Windows machines) to __ez-connect-lite/wmsdk/tools/OpenOCD/Windows__ folder.
 
 ````
-copy \path\to\OpenOCD-0.9.0\bin\* \path\to\aws_starter_sdk\wmsdk\tools\OpenOCD\Windows
+copy \path\to\OpenOCD-0.9.0\bin\* \path\to\ez-connect-lite\wmsdk\tools\OpenOCD\Windows
 OR
-copy \path\to\OpenOCD-0.9.0\bin-x64\* \path\to\aws_starter_sdk\wmsdk\tools\OpenOCD\Windows
+copy \path\to\OpenOCD-0.9.0\bin-x64\* \path\to\ez-connect-lite\wmsdk\tools\OpenOCD\Windows
 ````
 ## Installing WinUSB Driver
 * Download WinUSB driver installer from http://zadig.akeo.ie/.

@@ -5,11 +5,11 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of WiFi mi
 
 ## Dev Boards
 
-|Name|Controller|Price|Link|
-|:-:|:-:|:-:|:-:|
-| IoT Starter Kit  |88MW302| $49| [ Buy Now >][globalscale]|
-| AzureWave EVB  | 88MW300| $25 |[ Buy Now >][azurewave] |
-| Makerville Knit |88MW300| $15 |[ Buy Now >][makerville]|
+|Name|Link|
+|:-:|:-:|
+| IoT Starter Kit  | <a href="https://www.amazon.com/Globalscale-MW302-IoT-Starter-Powered/dp/B0168DLQHI/" target="_blank" class="button">Buy Now</a>|
+| AzureWave EVB    |<a href="http://www.buyiot.net/" target="_blank" class="button">Buy Now</a>|
+| Makerville Knit  |<a href="https://makerville.io/knit/" target="_blank" class="button">Buy Now</a>|
 
 
 ## Get the SDK
@@ -19,7 +19,5 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of WiFi mi
     git clone https://github.com/marvell-iot/aws_starter_sdk
 
 
-[globalscale]:  https://www.amazon.com/Globalscale-MW302-IoT-Starter-Powered/dp/B0168DLQHI/
-[azurewave]: http://www.buyiot.net/
-[makerville]: https://makerville.io/knit
 [download]: https://github.com/marvell-iot/aws_starter_sdk/archive/master.zip
+ 

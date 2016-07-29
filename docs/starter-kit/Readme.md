@@ -16,13 +16,13 @@ To the left of the SoC
 | :------------ |:---------------:| :-----:| :-----:|
 | 11      | UART1_CTS | SSP1_CLK|-
 | 12      | UART1_RTS |SSP1_FRM |-
-| 04      | I2C0_SDA | CAN_TX|GPT0_CH4
-| 05      | I2C0_SCL | CAN_RX|GPT0_CH5
+| 04      | I2C0_SDA | -|GPT0_CH4
+| 05      | I2C0_SCL | -|GPT0_CH5
 | 13      | UART1_TXD| SSP1_TXD|-
 | 14      | UART1_RXD | SSP1_RXD| -
 | 22      | WAKE0 | - | -
-| 26      | PUSH_SW0 |I2C1_SCL|CAN_RX
-| 25      | 32KHz_CLK_IN | I2C1_SDA|CAN_TX
+| 26      | PUSH_SW0 |I2C1_SCL|-
+| 25      | 32KHz_CLK_IN | I2C1_SDA|-
 | 39      | I2C0_RESET | - | -
 | 23      | WAKE1 |- |-
 | 02      | UART0_TXD | SSP0_TXD|GPT0_CH2

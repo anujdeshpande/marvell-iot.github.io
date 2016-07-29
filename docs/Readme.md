@@ -42,6 +42,11 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ```
 
+### Eclipse IDE
+
+You can find instructions for [setting up Eclipse here](./eclipse/). Eclipse C/C++ IDE is great tool for which we have support in the EZ-Connect IDE. Although it is not necessary to use it to build applications, it's a great resource if you are getting started.
+
+
 ## Building the SDK and Applications
 
 The following command builds the entire SDK including all the libraries and sample applications:
@@ -158,10 +163,15 @@ Since the application gets stored on the flash memory of the development board/m
 
 ## Tutorials
 
-### [Develop applications using the SDK](./developing-with-the-sdk/)
-### [Setting up Eclipse](./eclipse/)
+- [Hello World](./hello-world/)
+- [WiFi basics](./wifi-basics/)
+- [PinMux](./pinmux/)
+- [AWS IoT](./aws-iot/)
 
+## Projects
 
-## Cloud Agents
+Here's a list of projects that people have made using the Marvell SDK.
 
-### [AWS IoT](./aws-iot/)
+- <a href="https://www.hackster.io/cubot/cubled-79119f" target="_blank">CUBLED</a> - Control a 4x4x4 LED cube using AWS IoT
+- <a href="https://www.hackster.io/anujdeshpande/state-of-the-city-b81d85">State of the City</a> - Create a map with sensor data from different cloud connected sensors
+- More projects on [Hackster](https://www.hackster.io/search?per_page=21&q=marvell&type=BaseArticle)

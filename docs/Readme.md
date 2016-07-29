@@ -56,12 +56,6 @@ To build applications for a particular development board, pass the ```BOARD_FILE
 $ make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c
 ```
 
-## Firmware Variants
-
-Whenever an application firmware is built, two kinds of artifacts are created
-
-- **hello_world.axf:** This is a firmware image that can directly be loaded into the SRAM of the micro-controller using the ```ramload.py``` program. Since the firmware image is not written to flash, this operation is faster. This is commonly used for iterative development.
-- **hello_world.bin:** This is a firmware image that can be flashed on to the starter kit. This is commonly used as the default firmware that gets executed on boot up.
 
 ## Uploading your code
 
@@ -69,6 +63,11 @@ There are 2 ways of executing your code on the micro-controller boards.
 
 - RAM load
 - Flash load
+
+Before going into detail about them, let's check out the firmware files that are created when you compile an application using the SDK -
+
+### Firmware Variants
+
 
 When you compile an application, a `.axf`, `.map`, and `.bin` are created.
 
@@ -85,13 +84,16 @@ make[1]: Leaving directory '/home/user/ez-connect-lite'
 
 ```
 
-- `.axf` file 
+- `hello_world.axf`: This is a firmware image that can directly be loaded into the SRAM of the micro-controller. Since the firmware image is not written to flash, this operation is faster. This is commonly used for iterative development.
+- `hello_world.map`: This is a file which helps us to understand where all the symbols are located in the memory after linking. This can be used for advanced debugging, and should be ignored otherwise.
+- `hello_world.bin`: This is a firmware image that can be flashed on to the starter kit. This is commonly used as the default firmware that gets executed on boot up.
+
 
 Let's take a closer look at how to use these files to run your application on the development boards -
 
 ### RAM load
 
-We will be using the `ramload.py` python script that can be found in the `sdk/tools/OpenOCD` directory.
+We will be using the `ramload.py` python script that can be found in the `sdk/tools/OpenOCD` directory. This is used to upload the `axf` firmware to the development board.
 
 ```
 $ python sdk/tools/OpenOCD/ramload.py --help
@@ -108,10 +110,17 @@ Optional Usage:
 
 ```
 
+For example, to upload a sample application to the RAM of the controller using the `stlink` interface, we will run
+
+```
+$ python sdk/tools/OpenOCD/ramload.py -i stlink bin/knit-v1/hello_world.axf
+```
+
+You should keep it in mind that reseting the board or shutting down the power will wipe the RAM. So code uploaded via `ramload.py` is not persistent across resets/power cycles.
 
 ### Flash load
 
-We will be using the `flash.py` python script that can be found in the `sdk/tools/OpenOCD` directory.
+We will be using the `flash.py` python script that can be found in the `sdk/tools/OpenOCD` directory. This is used to upload the `bin` firmware to the development board.
 
 ```
 $ python sdk/tools/OpenOCD/flash.py --help
@@ -130,6 +139,15 @@ Optional Usage:
  [-h | --help]
           Display usage
 ```
+
+For example, to upload a sample application to the flash of the development board using the stlink interface, we will run
+
+```
+$ python sdk/tools/OpenOCD/flash.py -i stlink --mcufw bin/knit-v1/hello_world.binary
+```
+
+Since the application gets stored on the flash memory of the development board/module, it is persis across resets/power cycles.
+
 
 ## Tutorials
 

@@ -33,7 +33,7 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of WiFi mi
 * [Product details](http://www.marvell.com/microcontrollers/88MW300/302/)
 
 
-### Get the development boards
+### Get the Development Boards
 
 |Name|Link|
 |:-:|:-:|

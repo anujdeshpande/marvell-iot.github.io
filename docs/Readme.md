@@ -1,6 +1,13 @@
 # Documentation
 
 
+## Supported Boards
+
+- [Globalscale MW302 AWS IoT Starter Kit](./starter-kit/)
+- AzureWave EVB and EVBA
+- [Makerville Knit](./makerville-knit/)
+
+
 ## Get the SDK
 
  [ Download .zip >][download] or use git
@@ -10,15 +17,15 @@
 
 [download]: https://github.com/marvell-iot/ez-connect-lite/archive/master.zip
 
-## Setup development host
+## Setup Development Host
 
-Make sure you have followed the OS specific instructions listed below before proceeding further - 
+Make sure you have followed the OS specific instructions listed below before proceeding further -
 
 - [Windows](./windows-host-setup/)
 - [Linux](./linux-host-setup/)
 - [Mac](./mac-host-setup/)
 
-### Install ARM cross-compiler toolchain
+### Install ARM Cross-compiler Toolchain
 
 Apart from installing development host specific drivers and packages as mentioned above, an ARM cross-compiler toolchain should be installed on the development host. The EZ-Connect Lite SDK supports the GCC Compiler Toolchain.
 
@@ -35,7 +42,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ```
 
-## Building the SDK and applications
+## Building the SDK and Applications
 
 The following command builds the entire SDK including all the libraries and sample applications:
 
@@ -57,7 +64,7 @@ $ make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c
 ```
 
 
-## Uploading your code
+## Uploading Your Code
 
 There are 2 ways of executing your code on the micro-controller boards.
 
@@ -91,7 +98,7 @@ make[1]: Leaving directory '/home/user/ez-connect-lite'
 
 Let's take a closer look at how to use these files to run your application on the development boards -
 
-### RAM load
+### RAM Load
 
 We will be using the `ramload.py` python script that can be found in the `sdk/tools/OpenOCD` directory. This is used to upload the `axf` firmware to the development board.
 
@@ -118,7 +125,7 @@ $ python sdk/tools/OpenOCD/ramload.py -i stlink bin/knit-v1/hello_world.axf
 
 You should keep it in mind that reseting the board or shutting down the power will wipe the RAM. So code uploaded via `ramload.py` is not persistent across resets/power cycles.
 
-### Flash load
+### Flash Load
 
 We will be using the `flash.py` python script that can be found in the `sdk/tools/OpenOCD` directory. This is used to upload the `bin` firmware to the development board.
 
@@ -155,6 +162,6 @@ Since the application gets stored on the flash memory of the development board/m
 ### [Setting up Eclipse](./eclipse/)
 
 
-## Cloud agents
+## Cloud Agents
 
 ### [AWS IoT](./aws-iot/)

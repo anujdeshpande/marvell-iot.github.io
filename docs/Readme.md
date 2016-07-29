@@ -12,13 +12,13 @@
 
 ## Setup development host
 
-The following operating systems are supported -
+Make sure you have followed the OS specific instructions listed below before proceeding further - 
 
 - [Windows](./windows-host-setup/)
 - [Linux](./linux-host-setup/)
 - [Mac](./mac-host-setup/)
 
-## Install ARM cross-compiler toolchain
+### Install ARM cross-compiler toolchain
 
 Apart from installing development host specific drivers and packages as mentioned above, an ARM cross-compiler toolchain should be installed on the development host. The EZ-Connect Lite SDK supports the GCC Compiler Toolchain.
 
@@ -152,5 +152,9 @@ Since the application gets stored on the flash memory of the development board/m
 ## Tutorials
 
 ### [Develop applications using the SDK](./developing-with-the-sdk/)
-### [Connect to AWS IoT](./aws-iot/)
 ### [Setting up Eclipse](./eclipse/)
+
+
+## Cloud agents
+
+### [AWS IoT](./aws-iot/)

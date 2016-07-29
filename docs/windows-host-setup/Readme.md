@@ -1,5 +1,6 @@
 ## Installing Packages
 * Install the following GnuWin32 packages from http://gnuwin32.sourceforge.net/packages.html:
+
  * coreutils
  * make
  * which
@@ -8,11 +9,6 @@
 * Install Python 2.7 for Windows from https://www.python.org/. Make sure python is added to the system path during installation.
 
 ## Getting OpenOCD
-
-- Clone Marvell's Starter SDK for AWS
-
-
-      git clone https://github.com/marvell-iot/ez-connect-lite.git
 
 * Get OpenOCD 0.9.0 for Windows from [here](http://www.freddiechopin.info/en/download/category/4-openocd?download=118%3Aopenocd-0.9.0)
 

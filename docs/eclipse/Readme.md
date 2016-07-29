@@ -5,9 +5,9 @@ This page documents how to setup Eclipse as a development IDE for the available 
 
 Depending on your platform, follow the instructions given below to install the requisite tools :
 
-1. [Windows](https://github.com/marvell-iot/aws_starter_sdk/wiki/Windows-Development-Host-Setup)
-2. [Mac OS X](https://github.com/marvell-iot/aws_starter_sdk/wiki/Mac-Development-Host-Setup)
-3. [Linux](https://github.com/marvell-iot/aws_starter_sdk/wiki/Linux-Development-Host-Setup)
+1. [Windows](http://marvell-iot.github.io/docs/windows-host-setup/)
+2. [Mac OS X](http://marvell-iot.github.io/docs/mac-host-setup/)
+3. [Linux](http://marvell-iot.github.io/docs/linux-host-setup/)
 
 ### Step 1 : Install Eclipse Mars
 

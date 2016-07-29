@@ -85,6 +85,7 @@ make[1]: Leaving directory '/home/user/ez-connect-lite'
 
 ```
 
+- `.axf` file 
 
 Let's take a closer look at how to use these files to run your application on the development boards -
 
@@ -132,4 +133,6 @@ Optional Usage:
 
 ## Tutorials
 
-- [Develop applications using the SDK]()
+### [Develop applications using the SDK](./developing-with-the-sdk/)
+### [Connect to AWS IoT](./aws-iot/)
+### [Setting up Eclipse](./eclipse/)

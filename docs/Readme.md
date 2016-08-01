@@ -158,7 +158,7 @@ For example, to upload a sample application to the flash of the development boar
 $ python sdk/tools/OpenOCD/flash.py -i stlink --mcufw bin/knit-v1/hello_world.binary
 ```
 
-Since the application gets stored on the flash memory of the development board/module, it is persis across resets/power cycles.
+Since the application gets stored on the flash memory of the development board/module, it is persistent across resets/power cycles.
 
 
 ## Tutorials
@@ -173,5 +173,5 @@ Since the application gets stored on the flash memory of the development board/m
 Here's a list of projects that people have made using the Marvell SDK.
 
 - <a href="https://www.hackster.io/cubot/cubled-79119f" target="_blank">CUBLED</a> - Control a 4x4x4 LED cube using AWS IoT
-- <a href="https://www.hackster.io/anujdeshpande/state-of-the-city-b81d85">State of the City</a> - Create a map with sensor data from different cloud connected sensors
-- More projects on [Hackster](https://www.hackster.io/search?per_page=21&q=marvell&type=BaseArticle)
+- <a href="https://www.hackster.io/anujdeshpande/state-of-the-city-b81d85" target="_blank">State of the City</a> - Create a map with sensor data from different cloud connected sensors
+- More projects on <a href="https://www.hackster.io/search?per_page=21&q=marvell&type=BaseArticle" target="_blank">Hackster</a>

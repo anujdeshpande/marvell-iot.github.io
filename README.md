@@ -3,7 +3,7 @@
 EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of Wi-Fi microcontrollers.
 
 
-## SDK features
+## SDK Features
 
 * Secure connections using TLS 1.2
 * FreeRTOS as the underlying real time operating system
@@ -22,7 +22,7 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of Wi-Fi m
 [download]: https://github.com/marvell-iot/ez-connect-lite/archive/master.zip
 
 
-## SoC specs
+## SoC Specs
 
 * 32-bit Cortex M4F
 * Upto 200Mhz

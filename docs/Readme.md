@@ -164,7 +164,7 @@ Since the application gets stored on the flash memory of the development board/m
 ## Tutorials
 
 - [Hello World](./hello-world/)
-- [WiFi basics](./wifi-basics/)
+- [Wi-Fi basics](./wifi-basics/)
 - [PinMux](./pinmux/)
 - [AWS IoT](./aws-iot/)
 

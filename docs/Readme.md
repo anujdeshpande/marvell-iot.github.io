@@ -155,7 +155,7 @@ Optional Usage:
 For example, to upload a sample application to the flash of the development board using the stlink interface, we will run
 
 ```
-$ python sdk/tools/OpenOCD/flash.py -i stlink --mcufw bin/knit-v1/hello_world.binary
+$ python sdk/tools/OpenOCD/flash.py -i stlink --mcufw bin/knit-v1/hello_world.bin
 ```
 
 Since the application gets stored on the flash memory of the development board/module, it is persistent across resets/power cycles.

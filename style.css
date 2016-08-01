@@ -310,7 +310,7 @@ a:hover {
 }
 .content h1,
 .content h2 {
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-size: 1.5em;
 }
 .content h3 {

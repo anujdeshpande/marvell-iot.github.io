@@ -44,11 +44,26 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of WiFi mi
 
 ## Documentation
 
-You can find instructions on setting up your development host, flashing boards, etc [here](./docs)
-
-[API docs](http://marvell-iot.github.io/aws_starter_sdk)
+- [SDK Documentation](./docs) : You can find instructions on setting up your development host, flashing boards, etc
+- [API Reference](http://marvell-iot.github.io/aws_starter_sdk) : Documentation about individual functions, classes, and so on.
 
 ## Support
 
 - [![Join the chat at https://gitter.im/marvell-iot/ez-connect-lite](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marvell-iot/ez-connect-lite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 - [GitHub Issues](https://github.com/marvell-iot/ez-connect-lite/issues)
+
+## Products
+
+Some of the commercially available products that have been made using the 88MW300/2 WiFi microcontroller-
+<table style="width:100%">
+  <tr>
+    <td>Hello Barbie</td>
+    <td><a href="http://www.somersetrecon.com/blog/2015/11/20/hello-barbie-security-part-1-teardown" target="_blank">Teardown from Somerset Recon</a></td>
+    <td>See it in action <a href="https://www.youtube.com/watch?v=RJMvmVCwoNM" target="_blank">here</a></td>
+  </tr>
+  <tr>
+    <td>Xiaomi Yeelight</td>
+    <td><a href="http://www.miui.com/thread-4260673-1-1.html" target="_blank">Teardown from miui.com (in Chinese)</a></td>
+    <td>See it in action <a href="https://www.youtube.com/watch?v=x0RCSBAH6gE" target="_blank">here</a></td>
+  </tr>
+</table>

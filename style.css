@@ -216,7 +216,7 @@ a:hover {
 .content pre > code {
   display: block;
   background: transparent;
-  font-size: 0.85em;
+  font-size: 1em;
   letter-spacing: -1px;
 }
 .content blockquote :first-child {

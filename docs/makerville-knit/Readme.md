@@ -1,5 +1,6 @@
 # Makerville Knit
 
+<a href="https://makerville.io/knit/" target="_blank" class="button">Buy Now</a>
 
 * 32-bit Cortex M4F at 200Mhz
 * 512KB SRAM
@@ -19,6 +20,17 @@ The multiplexed peripherals include -
 | 2| Wake up|
 | 1| DAC - 10 bit|
 | 25| GPIOs|
+
+## Board File and Binaries
+
+The board file associated with the Knit board in the EZ Connect Lite SDK is `knit-v1.c`.
+
+Here's how to compile a simple `hello_world` for Knit -
+```
+make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c
+```
+
+The generated binaries can be found in the `bin/knit-v1`
 
 
 ## Pin Map

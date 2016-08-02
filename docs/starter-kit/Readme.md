@@ -8,6 +8,22 @@
 
 (click image to open larger version)
 
+
+## Board File and Binaries
+
+The board file associated with the AWS Starter Kit in the EZ Connect Lite SDK is `mw302-rd.c`. If you do not explicitly mention a  `BOARD_FILE` while building the SDK or a single `APP`, it will assume it is the AWS Starter Kit.
+
+Here's how to compile a simple `hello_world` for AWS Starter Kit -
+
+```
+make APP=sample_apps/hello_world
+```
+
+The generated binaries can be found in the `bin/mw302_rd`
+
+
+## PinMap
+
 ### Header 2
 
 To the left of the SoC

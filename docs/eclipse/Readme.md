@@ -90,7 +90,7 @@ It flashes the selected recovery flash 'blob' in the flash. Internally it uses f
 
 
 #### Note
-**Linux** Users must once execute script wmsdk/tools/bin/perm_fix.sh to use OpenOCD and serial console in Eclipse.
+**Linux** Users must once execute script sdk/tools/bin/perm_fix.sh to use OpenOCD and serial console in Eclipse.
 
 
 ### Step 7 : Use the launchers

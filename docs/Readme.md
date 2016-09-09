@@ -63,6 +63,7 @@ In this section, you will see how to build the SDK, the included sample applicat
 - [Wi-Fi basics](./wifi-basics/)
 - [PinMux](./pinmux/)
 - [AWS IoT Starter Demo](./aws-iot/)
+- [Alexa](./alexa/)
 
 ## Projects
 

@@ -31,7 +31,7 @@ AWS.config.update({accessKeyId: '***************', secretAccessKey: '***********
 
 //Initializing client for IoT
 var iotdata = new AWS.IotData({endpoint: config.IOT_BROKER_ENDPOINT});
-var EdisonLightApplianceId = "A146-3456-b31d-7ec4c146c5ea"; // This can be anything
+var LightApplianceId = "A146-3456-b31d-7ec4c146c5ea"; // This can be anything
 // namespaces
 const NAMESPACE_CONTROL = "Alexa.ConnectedHome.Control";
 const NAMESPACE_DISCOVERY = "Alexa.ConnectedHome.Discovery";
@@ -75,11 +75,11 @@ var handleDiscovery = function(event) {
   var header = createHeader(NAMESPACE_DISCOVERY, RESPONSE_DISCOVER);
    var appliances = [];
     var kitchenLight = {
-        applianceId: EdisonLightApplianceId,
+        applianceId: LightApplianceId,
         manufacturerName: 'Marvell',
         modelName: '88MW30X',
         version: 'VER01',
-        friendlyName: 'Edison',
+        friendlyName: 'Kitchen Light',
         friendlyDescription: 'LED on Pin number 40',
         isReachable: true,
         actions:[
@@ -319,13 +319,13 @@ Now ask Alexa (either the physical device or the browser simulation) to discover
 
     Alexa discover devices
 
-After that you can ask it turn the light on or off. In our case the light is named "Edison"
+After that you can ask it turn the light on or off. In our case the light is named "Kitchen Light"
 
-    Alexa turn on Edison
+    Alexa turn on kitchen light
 
 or
 
-    Alexa turn off Edison
+    Alexa turn off kitchen light
 
 
 ## Advanced

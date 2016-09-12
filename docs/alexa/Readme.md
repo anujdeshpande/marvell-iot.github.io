@@ -327,9 +327,11 @@ or
 
     Alexa turn off Edison
 
+
 ## Advanced
 
-In the above setup we have done a few things from a development point of view that we will have to modify to make this Alexa Skill publishable.
+- In the above setup we have done a few things from a development point of view that we will have to modify to make this Alexa Skill publishable. As we have hard coded the AWS IoT thing credentials, we won't be able to publish this skill. This will only be usable by the developer and hobbyists, from their Amazon account.
 
-- Read the client ID which has been received in the payload, along with the type of intent - for exampmle `DiscoverAppliancesRequest` from clientID `d3234231f`.
-- Each client ID which will be an end user in the real world, and will have an AWS IoT thing associated with his appliance. The Lambda function will have to look up the appliances and the AWS IoT details based on this client ID.
+- When the Lambda function is triggered, it receives a payload. In our function, we have simply used the intent field from this received data. For example, we have called our handler functions for discovering devices, if a `DiscoverAppliancesRequest` intent was received. But the payload that is received has a few other fields which are useful to us.
+
+- As we have setup OAuth, with Amazon as a provider, we get a `clientID` from the particular provider. Note that this does not have to be Amazon. It can be any of the other providers like Google, Facebook, Twitter or even your own custom OAuth service. This `cliendID` is passed to us along with the type of intent and should be used to identify the devices the particular user owns.

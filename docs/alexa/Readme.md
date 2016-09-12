@@ -16,10 +16,16 @@ Please follow the instructions given in our [AWS IoT tutorial](../aws-iot/) to c
 
 ## Create a Lambda Function
 
-Now we are going to create a Lambda function, and configure some part of it. After creating the Alexa Skill we will come back to finish configuring.
+Now we are going to create a [Lambda function](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html), and configure some part of it. After creating the Alexa Skill we will come back to finish configuring.
 
-- <img src="imgs/Lambda.png" width=800></img>
-- <img src="imgs/ledSkillAdapter.png" width=800></img>
+- Hit getting started on the Lambda dashboard 
+
+<img src="imgs/Lambda.png" width=800></img>
+
+- After skipping the template selection, we will be shown the configure function menu, where we will input our code and other details specific to the function. We will be using Node.js.
+
+<img src="imgs/ledSkillAdapter.png" width=800></img>
+
 - Next copy and paste the following code into the Lambda function
 
 ```

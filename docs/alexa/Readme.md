@@ -133,7 +133,7 @@ console.log("Turning On the LED now");
 var update = {
                 "state": {
                    "desired" : {
-                        "led" : 1
+                        "led" : 0
                     }
                 }
             };
@@ -157,7 +157,7 @@ var handleControlTurnOff = function(event) {
 var update = {
                 "state": {
                    "desired" : {
-                        "led" : 0
+                        "led" : 1
                     }
                 }
             };

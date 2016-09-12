@@ -4,6 +4,11 @@ Controlling an LED using Amazon Alexa's Smart Home Skills API
 
 Amazon Alexa is a voice service which powers devices like Amazon Echo and Amazon Tap. You can also try it out using a compatible browser by visiting <a href="http://echosim.io/" target="_blank">Echosim.io</a> if you don't have a physical device with you.
 
+In this screen capture, checkout how to create a new IoT thing by signing in to your AWS account.
+
+&nbsp; <iframe width="560" height="315" src="https://www.youtube.com/embed/LP4hU_7EqSw" frameborder="1" allowfullscreen></iframe>
+
+
 
 ## AWS IoT
 

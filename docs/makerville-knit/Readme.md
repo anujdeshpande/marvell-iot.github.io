@@ -21,7 +21,27 @@ The multiplexed peripherals include -
 | 1| DAC - 10 bit|
 | 25| GPIOs|
 
-## Board File and Binaries
+
+## Using ST Link for debugging
+
+Makerville Knit doesn't provide an onboard JTAG debugger to keep the dev board low cost. It comes with a USB to serial converter IC (CP210X), which can be used to get console access using a tool like [PuTTY](http://www.putty.org/), [`minicom`](http://linux.die.net/man/1/minicom) or similar.
+
+To make the Knit board work with Eclipse IDE using OpenOCD, and get complete hardware debugging, it is necessary to use an external debugger. The STLink V2 is the ideal choice because of it's low cost. It is available on [Adafruit](https://www.adafruit.com/products/2548?gclid=COzF3_6Rm8wCFdBZhgodadEIxQ) as well as [Amazon.com](https://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=st+link+). You can find it on Aliexpress and others too.
+
+The Knit board has a 4 pin header, next to the USB port, for directly connecting the ST Link debugger to the board. Make sure that you have still connected your USB micro cable so that you continue to get complete console access to the controller using `minicom` or similar.
+
+Jumper connections -
+
+|ST Link|Knit 4-pin header|
+|::|::|
+|5.0V|5V|
+|SWCLK|CLK|
+|SWDIO|DIO|
+|GND|GND|
+
+<img src="./STLinkConnections.jpg" width=500></img>
+
+## Board File, Binaries and Flashing
 
 The board file associated with the Knit board in the EZ Connect Lite SDK is `knit-v1.c`.
 
@@ -31,6 +51,21 @@ make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c
 ```
 
 The generated binaries can be found in the `bin/knit-v1`
+
+
+When flashing the Knit board using the ST Link as a debugger, make sure that you set it as an interface in the parameters of `flashprog.py` and `ramload.py`.
+
+```
+python sdk/tools/OpenOCD/flashprog.py -i stlink --mcufw <path to your bin>
+```
+
+or
+
+```
+python sdk/tools/OpenOCD/ramload.py -i stlink <path to your axf>
+```
+
+If you are using Eclipse, use the `Select Debug interface` launcher to set the default value to `stlink`
 
 
 ## Pin Map

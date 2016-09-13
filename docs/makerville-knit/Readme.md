@@ -33,7 +33,7 @@ The Knit board has a 4 pin header, next to the USB port, for directly connecting
 Jumper connections -
 
 |ST Link|Knit 4-pin header|
-|::|::|
+|:-:|:-:|
 |5.0V|5V|
 |SWCLK|CLK|
 |SWDIO|DIO|

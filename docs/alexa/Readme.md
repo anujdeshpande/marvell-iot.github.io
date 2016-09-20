@@ -30,70 +30,124 @@ Now we are going to create a [Lambda function](http://docs.aws.amazon.com/lambda
 
 ```
 var config = {};
-config.IOT_BROKER_ENDPOINT      = "#########.iot.us-west-2.amazonaws.com".toLowerCase(); // replace with your AWS IoT thing endpoint from the AWS IoT console
-config.IOT_BROKER_REGION        = "us-west-2"; // Use the same region as the one in which your AWS IoT thing is
-config.IOT_THING_NAME           = "AlexaLED"; // Use the same name as the one you used to create a thing in AWS IoT
-//Loading AWS SDK libraries
-var AWS = require('aws-sdk');
-AWS.config.region = config.IOT_BROKER_REGION;
 
-// From Amazon AWS IAM service, create an access key and secret, with the policy AWSIoTFullAccess attached.
-AWS.config.update({accessKeyId: '***************', secretAccessKey: '****************************'});
+
+
+
+config.IOT_BROKER_ENDPOINT      = "<your-end-point>.iot.us-west-2.amazonaws.com".toLowerCase();
+
+config.IOT_BROKER_REGION        = "<your-region>";
+
+config.IOT_THING_1              = "<thing-1>"; //lobby
+config.IOT_THING_2              = "<thing-2>";//bedroom
+config.IOT_THING_3              = "<thing-3>";//study
+
+//Loading AWS SDK libraries
+
+var AWS = require('aws-sdk');
+
+AWS.config.region = config.IOT_BROKER_REGION;
+// You can get your access key ID and success by vising your IAM profile. Make sure you give IoTFullAccess permission to the role in question
+AWS.config.update({accessKeyId: '<your-access-key-id>', secretAccessKey: '<your-access-key-secret>'});
 
 //Initializing client for IoT
+
 var iotdata = new AWS.IotData({endpoint: config.IOT_BROKER_ENDPOINT});
-var LightApplianceId = "A146-3456-b31d-7ec4c146c5ea"; // This can be anything
+
+// These values could be anything, but have to be unique
+var bedroomLightApplianceId     = "7ec4c146c51";
+var studyLightApplianceId       = "7ec4c146c52";
+var lobbyLightApplianceId       = "7ec4c146c53";
 // namespaces
+
 const NAMESPACE_CONTROL = "Alexa.ConnectedHome.Control";
+
 const NAMESPACE_DISCOVERY = "Alexa.ConnectedHome.Discovery";
+
 // discovery
+
 const REQUEST_DISCOVER = "DiscoverAppliancesRequest";
+
 const RESPONSE_DISCOVER = "DiscoverAppliancesResponse";
+
 // control
+
 const REQUEST_TURN_ON = "TurnOnRequest";
+
 const RESPONSE_TURN_ON = "TurnOnConfirmation";
+
 const REQUEST_TURN_OFF = "TurnOffRequest";
+
 const RESPONSE_TURN_OFF = "TurnOffConfirmation";
+
 // errors
+
 const ERROR_UNSUPPORTED_OPERATION = "UnsupportedOperationError";
+
 const ERROR_UNEXPECTED_INFO = "UnexpectedInformationReceivedError";
 
+
 // entry
+
 exports.handler = function (event, context, callback) {
+
   log("Received Directive", event);
+
   var requestedNamespace = event.header.namespace;
+
   var response = null;
+
   try {
+
     switch (requestedNamespace) {
+
       case NAMESPACE_DISCOVERY:
+
         response = handleDiscovery(event);
         console.log("In Discovery Switch");
         break;
+
       case NAMESPACE_CONTROL:
+
         response = handleControl(event);
+
         break;
+
       default:
+
         log("Error", "Unsupported namespace: " + requestedNamespace);
+
         response = handleUnexpectedInfo(requestedNamespace);
+
         break;
+
     }// switch
+
   } catch (error) {
+
     log("Error", error);
+
   }// try-catch
+
   callback(null, response);
+
 };// exports.handler
+
+
 var handleDiscovery = function(event) {
+
   var header = createHeader(NAMESPACE_DISCOVERY, RESPONSE_DISCOVER);
    var appliances = [];
-    var kitchenLight = {
-        applianceId: LightApplianceId,
+    var studyLight = {
+        applianceId: studyLightApplianceId,
         manufacturerName: 'Marvell',
-        modelName: '88MW30X',
+        modelName: '88MW30x',
         version: 'VER01',
-        friendlyName: 'Kitchen Light',
-        friendlyDescription: 'LED on Pin number 40',
+        friendlyName: 'Study Light',
+        friendlyDescription: 'Light up your study',
         isReachable: true,
         actions:[
+
             "turnOn",
             "turnOff"
         ],
@@ -104,53 +158,139 @@ var handleDiscovery = function(event) {
              * This information will be returned back to the driver when user requests
              * action on this appliance.
              */
-            fullApplianceId: '2cd6b650-c0h0-4062-b31d-7ec2c146c5ea',
-            deviceId: "39003d000447343232363230"
+            fullApplianceId: '2cd6b650-c0h0-4062-b31d-7ec2c146c5e1',
+            deviceId: "39003d000447343232363231"
         }
     };
-     appliances.push(kitchenLight);
+    var bedroomLight = {
+        applianceId: bedroomLightApplianceId,
+        manufacturerName: 'Marvell',
+        modelName: '88MW300',
+        version: 'VER01',
+        friendlyName: 'Bedroom Light',
+        friendlyDescription: 'So that you don't have to get up to switch off the light ;)',
+        isReachable: true,
+        actions:[
+
+            "turnOn",
+            "turnOff"
+        ],
+        additionalApplianceDetails: {
+            /**
+             * OPTIONAL:
+             * We can use this to persist any appliance specific metadata.
+             * This information will be returned back to the driver when user requests
+             * action on this appliance.
+             */
+            fullApplianceId: '2cd6b650-c0h0-4062-b31d-7ec2c146c5e2',
+            deviceId: "39003d000447343232363232"
+        }
+    };
+    var lobbyLight = {
+        applianceId: lobbyLightApplianceId,
+        manufacturerName: 'Marvell',
+        modelName: '88MW300',
+        version: 'VER01',
+        friendlyName: 'Lobby Light',
+        friendlyDescription: 'Control your lobby light',
+        isReachable: true,
+        actions:[
+
+            "turnOn",
+            "turnOff"
+        ],
+        additionalApplianceDetails: {
+            /**
+             * OPTIONAL:
+             * We can use this to persist any appliance specific metadata.
+             * This information will be returned back to the driver when user requests
+             * action on this appliance.
+             */
+            fullApplianceId: '2cd6b650-c0h0-4062-b31d-7ec2c146c5e3',
+            deviceId: "39003d000447343232363233"
+        }
+    };
+     appliances.push(bedroomLight);
+     appliances.push(studyLight);
+     appliances.push(lobbyLight);
     /**
-     * Craft the final response back to Alexa Connected Home Skill. This will include all the
+     * Craft the final response back to Alexa Connected Home Skill. This will include all the 
      * discoverd appliances.
      */
     var payloads = {
         discoveredAppliances: appliances
     };
+
   console.log("Printing header and payload now");
   console.log(header,payloads);
+
   return createDirective(header,payloads);
+
 };// handleDiscovery
 
+
 var handleControl = function(event) {
+
   var response = null;
+
   var requestedName = event.header.name;
+
   switch (requestedName) {
+
     case REQUEST_TURN_ON :
+
       response = handleControlTurnOn(event);
+
       break;
+
     case REQUEST_TURN_OFF :
+
       response = handleControlTurnOff(event);
+
       break;
+
     default:
+
       log("Error", "Unsupported operation" + requestedName);
+
       response = handleUnsupportedOperation();
+
       break;     
+
   }// switch
+
   return response;
+
 };//; handleControl
 
+
 var handleControlTurnOn = function(event) {
+console.log(event.payload.appliance.applianceId);
+var thingPicker='';
 console.log("Turning On the LED now");
 var update = {
                 "state": {
                    "desired" : {
-                        "led" : 0
+                        "power" : 1
                     }
                 }
             };
+            
+            switch(event.payload.appliance.applianceId){
+            case lobbyLightApplianceId:
+                thingPicker = config.IOT_THING_1; 
+                break;
+            case bedroomLightApplianceId:
+                thingPicker = config.IOT_THING_2;
+                break;
+            case studyLightApplianceId:
+                thingPicker = config.IOT_THING_3;
+                break;
+            }
+            console.log(thingPicker);
             iotdata.updateThingShadow({
                 payload: JSON.stringify(update),
-                thingName: config.IOT_THING_NAME
+                thingName: thingPicker
             }, function(err, data) {
                 if (err) {
                     console.log(err);
@@ -158,23 +298,42 @@ var update = {
                     console.log(data);
                 }
             });
+
+
   var header = createHeader(NAMESPACE_CONTROL,RESPONSE_TURN_ON);
   var payload = {};
+
   return createDirective(header,payload);
+
 };// handleControlTurnOn
 
+
 var handleControlTurnOff = function(event) {
+    console.log(event.payload.appliance.applianceId);
+    var thingPicker='';
     console.log("Turning Off the LED now");
 var update = {
                 "state": {
                    "desired" : {
-                        "led" : 1
+                        "power" : 0
                     }
                 }
             };
+           switch(event.payload.appliance.applianceId){
+            case lobbyLightApplianceId:
+                thingPicker = config.IOT_THING_1; 
+                break;
+            case bedroomLightApplianceId:
+                thingPicker = config.IOT_THING_2;
+                break;
+            case studyLightApplianceId:
+                thingPicker = config.IOT_THING_3;
+                break;
+            }
+            console.log(thingPicker);
             iotdata.updateThingShadow({
                 payload: JSON.stringify(update),
-                thingName: config.IOT_THING_NAME
+                thingName: thingPicker
             }, function(err, data) {
                 if (err) {
                     console.log(err);
@@ -182,54 +341,99 @@ var update = {
                     console.log(data);
                 }
             });
+
+
+
   var header = createHeader(NAMESPACE_CONTROL,RESPONSE_TURN_OFF);
+
   var payload = {};
+
   return createDirective(header,payload);
+
 };// handleControlTurnOff
 
+
 var handleUnsupportedOperation = function() {
+
   var header = createHeader(NAMESPACE_CONTROL,ERROR_UNSUPPORTED_OPERATION);
+
   var payload = {};
+
   return createDirective(header,payload);
+
 };// handleUnsupportedOperation
 
+
 var handleUnexpectedInfo = function(fault) {
+
   var header = createHeader(NAMESPACE_CONTROL,ERROR_UNEXPECTED_INFO);
+
   var payload = {
+
     "faultingParameter" : fault
+
   };
+
   return createDirective(header,payload);
+
 };// handleUnexpectedInfo
 
+
 // support functions
+
 var createMessageId = function() {
+
   var d = new Date().getTime();
+
   var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+
     var r = (d + Math.random()*16)%16 | 0;
+
     d = Math.floor(d/16);
+
     return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+
   });
+
   return uuid;
+
 };// createMessageId
 
+
 var createHeader = function(namespace, name) {
+
   return {
+
     "messageId": createMessageId(),
+
     "namespace": namespace,
+
     "name": name,
+
     "payloadVersion": "2"
+
   };
+
 };// createHeader
 
+
 var createDirective = function(header, payload) {
+
   return {
+
     "header" : header,
+
     "payload" : payload
+
   };
+
 };// createDirective
 
+
 var log = function(title, msg) {
+
   console.log('**** ' + title + ': ' + JSON.stringify(msg));
+
 };
 ```
 

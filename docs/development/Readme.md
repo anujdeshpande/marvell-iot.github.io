@@ -1,11 +1,7 @@
-# Firmware Variants
-
-Before we dive into developing applications, it's necessary to understand the different firmware types and how to use them to build your application.
-
-
-
 
 # Eclipse
+
+If you are using Eclipse, make sure that you have installed the IDE as well as the required plugins as mentioned in our guide [here](../eclipse/). Once you have completed the steps mentioned in the guide you can go through the sections below -
 
 ##  Building sample applications
 Next we are going to generate the binaries.
@@ -16,7 +12,7 @@ Next we are going to generate the binaries.
 
 ## Configure debug & external tools
 
-The EZ Connect Lite SDK consists of a .settings folder which contains Debug & External Tools launchers.
+The EZ Connect Lite SDK consists of a `.settings` folder which contains Debug & External Tools launchers. 
 
 
 ### Debug launchers :
@@ -31,30 +27,52 @@ The EZ Connect Lite SDK consists of a .settings folder which contains Debug & Ex
 
 1. External tools -> Organize Favourites
 2. Select Add
-<img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/externaltools.png" width=450>
 3. Select All -> Ok -> Ok
+<img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/externaltools.png" width=450>
 
 
 
 Following debug launchers are added:
 
-1. Debug.launch  
-It loads the selected application 'axf' file using arm-none-eabi-gdb and halts at application main(). It can be used to debug non-XIP applications from beginning
-2. Live Debug.lauch  
-It connects to an already running application on hardware and halts at the current instruction. It only loads the debugging symbols from the selected application 'axf' file.
-This launcher can also be used to debug XIP applications already flashed using 'Program MCU Firmware' launcher.
+- Debug.launch  
+It loads the selected application `axf` file using `arm-none-eabi-gdb` and halts at application `main()`. It can be used to debug non-XIP applications from beginning
+
+- Live Debug.launch  
+It connects to an already running application on hardware and halts at the current instruction. It only loads the debugging symbols from the selected application `axf` file.
+This launcher can also be used to debug XIP applications already flashed using `Program MCU Firmware` launcher.
 
 Following External tools launchers are added:
 
-1. Load in Memory.launch  
-It loads the selected non-XIP application 'axf' file on hardware. Internally it uses ramload.py script to load the selected axf file.
-2. Program MCU Firmware.launch  
-It flashes the selected application 'bin' file in the flash. Internally it uses flashprog.py script to burn selected bin file in the flash.
-3. Program Recovery Image.launch  
-It flashes the selected recovery flash 'blob' in the flash. Internally it uses flashprog.py script to burn the selected recovery flash in the flash.
+- Load in Memory  
+It loads the selected non-XIP application `axf` file on hardware. Internally it uses ramload.py script to load the selected axf file. The `.axf` files can be found under the `Binaries` section in Project Explorer in Eclipse. Loading the application in the memory/SRAM is faster and handy for development. Note that if your application requires files from the `ftfs` section as well as the Wi-Fi firmware, they have to be flashed first to the flash using `Program FTFS` and `Program Wi-Fi Firmware` launchers.
 
+- Prepare Flash  
+This erases the contents of the flash using the `flashprog.py` command. The layout that needs to be written can be found at  `sdk/tools/OpenOCD/mw300/layout.txt`. Make sure that you have selected this in the Project Explorer window in Eclipse.
+
+- Program Boot2  
+This flashes the bootloader to the flash on your development board. The bootloader always needs to be present. You can find it at `boot2/boot2.bin`.
+
+- Program FTFS  
+This flashes the filesystem to the flash on your development board. An example of this can be found in AWS Starter Demo in `sample_apps/aws_starter_demo`. A `www` folder is created which has the HTML, JS and other assets that you would like to server over the HTTP server. In the case of the `aws_starter_demo` these are required for provisioning the AWS credentials as well as the Wi-Fi SSID and passphrase. You can the build instructions for the `ftfs` partition  in the `build.mk` of the said sample application
+
+```
+#ifneq ($(wildcard $(d)/www),)
+aws_starter_demo-ftfs-y := aws_starter_demo.ftfs
+aws_starter_demo-ftfs-dir-y     := $(d)/www
+aws_starter_demo-ftfs-api-y := 100
+#endif
+```
+- Program MCU Firmware  
+It flashes the selected application 'bin' file in the flash. Internally it uses flashprog.py script to burn selected bin file to the flash.
+
+- Program Wi-Fi Firmware  
+This flashes the Wi-Fi firmware to the flash on your development board. You can find the firmware at `wifi-firmware/mw30x/mw30x_uapsta_14.76.36.p103.bin.xz`
+
+- Select Debug Interface  
+You can use this launcher to connect to the micro-controller using different debug interfaces. The supported one's are found in `sdk/tools/OpenOCD/interface/` folder. Some development boards have a FTDI chip onboard which is used by default. If you are using Makerville Knit or your own custom board and would like to use  the ST Link debugger, you will have to change the default using this launcher.  
 
 #### Note
+
 **Linux** Users must once execute script sdk/tools/bin/perm_fix.sh to use OpenOCD and serial console in Eclipse.
 
 

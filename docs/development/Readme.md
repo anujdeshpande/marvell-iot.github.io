@@ -123,7 +123,7 @@ $ python sdk/tools/OpenOCD/flashprog.py --boot2 boot2/boot2.bin
 ```
 
 ### wififw
-This is the standard Wi-Fi firmware that the controller requires. This is made available as a binary in the folder `wififw/mw30x`
+This is the standard Wi-Fi firmware that the controller requires. This is made available as a binary in the folder `wifi-firmware/mw30x`
 If you simply want to flash the Wi-Fi firmware, you can use
 
 ```

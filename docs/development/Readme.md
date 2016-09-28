@@ -31,17 +31,28 @@ The EZ Connect Lite SDK consists of a `.settings` folder which contains Debug & 
 <img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/externaltools.png" width=450>
 
 
+## Use the launchers
 
-Following debug launchers are added:
+### Debug launchers 
 
-- Debug.launch  
+1. Debug.launch  
 It loads the selected application `axf` file using `arm-none-eabi-gdb` and halts at application `main()`. It can be used to debug non-XIP applications from beginning
 
-- Live Debug.launch  
+2. Live Debug.launch  
 It connects to an already running application on hardware and halts at the current instruction. It only loads the debugging symbols from the selected application `axf` file.
 This launcher can also be used to debug XIP applications already flashed using `Program MCU Firmware` launcher.
 
-Following External tools launchers are added:
+
+* From the binaries folder in the project view, select the .axf that you would like to debug.
+* Press the drop down next to the Debug symbol and select either Debug or Live Debug.
+* Select `Use configuration specific settings` and select `GDB Hardware Debugging Launcher`
+<img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/Debug.png" width=450>
+* Press Ok and Select `Yes` on the dialog that pops up next asking permission to open a new perspective.
+* A new perspective should open which should look something like the following screenshot.
+<img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/debugperspective.png" width=450>
+
+
+### External tools launchers
 
 - Load in Memory  
 It loads the selected non-XIP application `axf` file on hardware. Internally it uses ramload.py script to load the selected axf file. The `.axf` files can be found under the `Binaries` section in Project Explorer in Eclipse. Loading the application in the memory/SRAM is faster and handy for development. Note that if your application requires files from the `ftfs` section as well as the Wi-Fi firmware, they have to be flashed first to the flash using `Program FTFS` and `Program Wi-Fi Firmware` launchers.
@@ -76,15 +87,10 @@ You can use this launcher to connect to the micro-controller using different deb
 **Linux** Users must once execute script sdk/tools/bin/perm_fix.sh to use OpenOCD and serial console in Eclipse.
 
 
-## Use the launchers
 
-* From the binaries folder in the project view, select the .axf that you would like to debug.
-* Press the drop down next to the Debug symbol and select either Debug or Live Debug.
-* Select `Use configuration specific settings` and select `GDB Hardware Debugging Launcher`
-<img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/Debug.png" width=450>
-* Press Ok and Select `Yes` on the dialog that pops up next asking permission to open a new perspective.
-* A new perspective should open which should look something like the following screenshot.
-<img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/debugperspective.png" width=450>
+
+
+# Command Line
 
 The following command builds the entire SDK including all the libraries and sample applications:
 
@@ -104,9 +110,6 @@ To build applications for a particular development board, pass the ```BOARD_FILE
 ```
 $ make APP=sample_apps/hello_world BOARD_FILE=sdk/src/boards/knit-v1.c
 ```
-
-
-# Command Line
 
 ## Factory
 These are blobs of code that your application will depend on, but you won't be able to build them from source.

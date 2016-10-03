@@ -34,7 +34,8 @@ The Starter Kit has been pre-programmed with a simple demo that exposes some of 
  - Uses the AWS IoT to AWS Lambda feature
    - A push-button press on the starter kit can trigger the an AWS Lambda function that takes an action
 
-The Amazon IoT User Guide provides excellent overview of the functionality offered by AWS IoT. It is advisable to read that document to get a better idea of the AWS IoT Service. This Quick Start Guide will frequently refer to the steps described in the AWS IoT User Guide wherever applicable in the flow.
+
+The [Amazon IoT Developer Guide](http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf) provides excellent overview of the functionality offered by AWS IoT. It is advisable to read that document to get a better idea of the AWS IoT Service. This Quick Start Guide will frequently refer to the steps described in the AWS IoT Developer Guide wherever applicable in the flow.
 
 ### Configuring your AWS IoT Service
 

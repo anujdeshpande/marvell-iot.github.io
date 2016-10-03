@@ -17,12 +17,12 @@ Typically for using AWS IoT Shadows the following sequence of calls will be usef
 
 Marvell's AWS IoT Starter Kit has the following contents:
 
-* Marvell 88MW302 Development Board
+* Marvell 88MW302 Development Board 
 * USB to mini-USB Cable
 
 <img src="https://raw.githubusercontent.com/marvell-iot/aws_starter_sdk_wiki_images/master/RD-88MW302-A0-V2%20wo%20shield.jpeg" width=800>
 
-Marvell's AWS IoT Starter SDK can be used to build and flash firmware on the starter kit. Using Marvell's AWS IoT SDK, it is extremely easy to create Internet-of-Things enabled devices communicating with AWS IoT service, in a very short amount of time.
+Marvell's AWS IoT Starter SDK can be used to build and flash firmware on the starter kit. Using Marvell's EZ Connect Lite SDK, it is extremely easy to create Internet-of-Things enabled devices communicating with AWS IoT service, in a very short amount of time.
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ The Starter Kit has been pre-programmed with a simple demo that exposes some of 
  - Uses the AWS IoT to AWS Lambda feature
    - A push-button press on the starter kit can trigger the an AWS Lambda function that takes an action
 
-The Amazon IoT User Guide provides excellent overview of the functionality offered by AWS IoT, and how it can be leveraged by the starter kit. It is advisable to read that document to get a better idea of the AWS IoT Service. This Quick Start Guide will frequently refer to the steps described in the AWS IoT User Guide wherever applicable in the flow.
+The Amazon IoT User Guide provides excellent overview of the functionality offered by AWS IoT. It is advisable to read that document to get a better idea of the AWS IoT Service. This Quick Start Guide will frequently refer to the steps described in the AWS IoT User Guide wherever applicable in the flow.
 
 ### Configuring your AWS IoT Service
 

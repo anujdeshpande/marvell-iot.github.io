@@ -38,7 +38,7 @@ int main()
 
 ```
 
-The [`wm_wlan_connect()`](http://marvell-iot.github.io/aws_starter_sdk/wmsdk_8h.html#abadf6262ff53dd041ebd0c3933bb2bdc) is simple and useful, but what if you don't want to hard-code the network credentials in your application firmware's code? The SDK also offers another more powerful Wi-Fi API, [`wm_wlan_start()`](http://marvell-iot.github.io/aws_starter_sdk/wmsdk_8h.html#a487b6f0c6c72bd77453b110d9accb4f0). This API does a number of things,
+The [`wm_wlan_connect()`](http://marvell-iot.github.io/aws_starter_sdk/wmsdk_8h.html#abadf6262ff53dd041ebd0c3933bb2bdc) is simple and useful, but what if you don't want to hard-code the network credentials in your application firmware? The SDK also offers another more powerful Wi-Fi API, [`wm_wlan_start()`](http://marvell-iot.github.io/aws_starter_sdk/wmsdk_8h.html#a487b6f0c6c72bd77453b110d9accb4f0). This API does a number of things,
 
 - Firstly, it starts a Wireless Network of its own, a Micro-AP/uAP
 - On this uAP network, it hosts a web-app based wizard that guides the end-user through the provisioning of the home Wi-Fi network

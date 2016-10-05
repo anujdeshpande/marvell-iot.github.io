@@ -1,6 +1,3 @@
-# Documentation
-
-# Documentation
 
 ## Supported Boards
 Find board specific information like pin map and board files on the following pages -

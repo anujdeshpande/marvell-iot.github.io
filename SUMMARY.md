@@ -5,6 +5,6 @@
    * Windows
    * Linux
    * MacOS
-* Tutorials
+* [Tutorials](tutorials.md)
 * FAQs
 

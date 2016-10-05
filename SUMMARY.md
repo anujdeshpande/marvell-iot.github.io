@@ -7,5 +7,6 @@
    * MacOS
 * [Tutorials](tutorials.md)
    * AWS
+   * Alexa
 * [FAQs](faqs.md)
 

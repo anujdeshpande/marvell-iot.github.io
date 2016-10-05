@@ -6,5 +6,6 @@
    * Linux
    * MacOS
 * [Tutorials](tutorials.md)
+   * AWS
 * [FAQs](faqs.md)
 

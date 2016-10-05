@@ -1,7 +1,7 @@
 # Summary
 
 * [Overview](documentation.md)
-* [Development Host](development_host.md)
+* [Development Host](aws.md)
    * Windows
    * Linux
    * MacOS

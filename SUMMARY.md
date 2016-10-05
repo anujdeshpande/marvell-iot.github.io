@@ -6,5 +6,5 @@
    * Linux
    * MacOS
 * [Tutorials](tutorials.md)
-* FAQs
+* [FAQs](faqs.md)
 

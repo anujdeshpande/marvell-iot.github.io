@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Overview](documentation.md)
-* [Development Host](awsmd.md)
+* [Development Host](devhost.md)
    * [OS](os.md)
        * Windows
        * Linux

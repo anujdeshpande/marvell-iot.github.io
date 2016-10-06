@@ -4,7 +4,7 @@
 * [Overview](documentation.md)
 * [Development Host](awsmd.md)
    * [Windows](windows.md)
-   * Linux
+   * [Linux](linux.md)
    * MacOS
 * [Tutorials](tutorials.md)
    * AWS

@@ -14,4 +14,5 @@
    * [Alexa](alexa.md)
 * [FAQs](faqs.md)
 * [Projects](projects.md)
+* Support
 

@@ -8,6 +8,7 @@
    * [Eclipse](eclipse.md)
    * [OS](os.md)
        * Windows
+       * Linux
    * [Windows](windows.md)
 * [Tutorials](tutorials.md)
    * AWS

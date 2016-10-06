@@ -6,6 +6,7 @@
    * [Windows](windows.md)
    * [Linux](linux.md)
    * [MacOS](install_toolchain.md)
+   * Toolchain
 * [Tutorials](tutorials.md)
    * AWS
    * Alexa

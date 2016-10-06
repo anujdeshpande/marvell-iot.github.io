@@ -12,7 +12,7 @@
 * [Tutorials](tutorials.md)
    * [AWS](aws.md)
    * [Alexa](alexa.md)
-   * PinMux
+   * [PinMux](pinmux.md)
 * [FAQs](faqs.md)
 * [Projects](projects.md)
 * [Support](support.md)

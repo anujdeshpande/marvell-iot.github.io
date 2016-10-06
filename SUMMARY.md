@@ -5,7 +5,6 @@
 * [Development Host](awsmd.md)
    * [Windows](windows.md)
    * [Linux](linux.md)
-   * [MacOS](install_toolchain.md)
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)
 * [Tutorials](tutorials.md)

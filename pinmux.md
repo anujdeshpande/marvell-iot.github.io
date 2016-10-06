@@ -1,6 +1,5 @@
 # PinMux
 
-# PinMux
 
 Various functionalities are multiplexed on the same pin as the number of pins are limited. The PinMux driver can be used to select the right functionality as per the application.
 

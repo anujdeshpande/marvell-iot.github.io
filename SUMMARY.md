@@ -11,6 +11,6 @@
    * [Eclipse](eclipse.md)
 * [Tutorials](tutorials.md)
    * [AWS](aws.md)
-   * Alexa
+   * [Alexa](alexa.md)
 * [FAQs](faqs.md)
 

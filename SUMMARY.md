@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Overview](documentation.md)
 * [Development Host](devhostmd.md)
    * [OS](os.md)
        * [Windows](windows.md)

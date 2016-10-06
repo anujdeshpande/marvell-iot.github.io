@@ -7,6 +7,7 @@
    * [Linux](linux.md)
    * [MacOS](install_toolchain.md)
    * [Toolchain](toolchain.md)
+   * Eclipse
 * [Tutorials](tutorials.md)
    * AWS
    * Alexa

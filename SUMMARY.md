@@ -5,7 +5,7 @@
 * [Development Host](awsmd.md)
    * [Windows](windows.md)
    * [Linux](linux.md)
-   * MacOS
+   * [MacOS](macos.md)
 * [Tutorials](tutorials.md)
    * AWS
    * Alexa

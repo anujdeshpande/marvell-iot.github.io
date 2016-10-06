@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Development Host ▶](devhostmd.md)
-   * [OS >](os.md)
+   * [OS ▶](os.md)
        * [Windows](windows.md)
        * [Linux](linux.md)
        * [MacOS](macos.md)

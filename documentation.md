@@ -17,13 +17,6 @@ Getting the SDK using git makes it easier to stay in sync with all the updates m
 
 [download]: https://github.com/marvell-iot/ez-connect-lite/archive/master.zip
 
-## Setup Development Host
-
-Make sure you have followed the OS specific instructions listed below before proceeding further -
-
-- [Windows](./windows-host-setup/)
-- [Linux](./linux-host-setup/)
-- [Mac](./mac-host-setup/)
 
 ### Install ARM Cross-compiler Toolchain
 

@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Development Host ▲](devhostmd.md)
+* [Development Host ▶](devhostmd.md)
    * [OS >](os.md)
        * [Windows](windows.md)
        * [Linux](linux.md)

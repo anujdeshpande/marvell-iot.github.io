@@ -4,7 +4,7 @@
 * [Overview](documentation.md)
 * [Development Host](devhostmd.md)
    * [OS](os.md)
-       * Windows
+       * [Windows](windows.md)
        * Linux
        * MacOS
    * [Toolchain](toolchain.md)

@@ -10,7 +10,7 @@
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)
 * [Tutorials](tutorials.md)
-   * AWS
+   * [AWS](aws.md)
    * Alexa
 * [FAQs](faqs.md)
 

@@ -6,7 +6,7 @@
    * Install Toolchain
    * [Windows](windows.md)
    * [Linux](linux.md)
-   * [MacOS](macos.md)
+   * [MacOS](install_toolchain.md)
 * [Tutorials](tutorials.md)
    * AWS
    * Alexa

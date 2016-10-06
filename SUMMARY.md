@@ -7,6 +7,7 @@
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)
    * [OS](os.md)
+       * Windows
    * [Windows](windows.md)
 * [Tutorials](tutorials.md)
    * AWS

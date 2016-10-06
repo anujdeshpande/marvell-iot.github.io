@@ -7,6 +7,7 @@
    * [Linux](linux.md)
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)
+   * OS
 * [Tutorials](tutorials.md)
    * AWS
    * Alexa

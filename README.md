@@ -33,17 +33,3 @@
 
 
 
-###[API Reference](http://marvell-iot.github.io/aws_starter_sdk)
-Documentation about individual functions, classes, and so on.
-
-
-## Products
-
-Some of the commercially available products that have been made using the 88MW300/2 Wi-Fi microcontroller-
-
-- <a href="http://hellobarbiefaq.mattel.com/" target="_blank">Hello Barbie</a>
- - <a href="http://www.somersetrecon.com/blog/2015/11/20/hello-barbie-security-part-1-teardown" target="_blank">Teardown from Somerset Recon</a>
- - See it in action <a href="https://www.youtube.com/watch?v=RJMvmVCwoNM" target="_blank">here</a>
-- <a href="http://www.mi.com/yeelight/" target="_blank">Xiaomi Yeelight</a>
- - <a href="http://www.miui.com/thread-4260673-1-1.html" target="_blank">Teardown from miui.com (in Chinese)</a>
- - See it in action <a href="https://www.youtube.com/watch?v=x0RCSBAH6gE" target="_blank">here</a>

@@ -8,7 +8,7 @@
        * [MacOS](macos.md)
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)
-* [Tutorials](tutorials.md)
+* [Tutorials >](tutorials.md)
    * [PinMux](pinmux.md)
    * [AWS](aws.md)
    * [Alexa](alexa.md)

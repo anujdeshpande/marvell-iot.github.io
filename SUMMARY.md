@@ -5,7 +5,7 @@
 * [Development Host](devhostmd.md)
    * [OS](os.md)
        * [Windows](windows.md)
-       * Linux
+       * [Linux](linux.md)
        * MacOS
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)

@@ -9,6 +9,7 @@
    * [OS](os.md)
        * Windows
        * Linux
+       * MacOS
    * [Windows](windows.md)
 * [Tutorials](tutorials.md)
    * AWS

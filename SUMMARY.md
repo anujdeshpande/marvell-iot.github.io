@@ -6,7 +6,7 @@
    * [Linux](linux.md)
    * [Toolchain](toolchain.md)
    * [Eclipse](eclipse.md)
-   * OS
+   * [OS](os.md)
    * [Windows](windows.md)
 * [Tutorials](tutorials.md)
    * AWS

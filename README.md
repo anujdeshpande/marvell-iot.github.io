@@ -1,9 +1,7 @@
-# Marvell IoT
-
-EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of Wi-Fi microcontrollers.
+# EZ-Connect Lite 
 
 
-## SDK Features
+### SDK Features
 
 * Secure connections using TLS 1.2
 * FreeRTOS as the underlying real time operating system
@@ -12,17 +10,9 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of Wi-Fi m
 * MQTT client for real time communication with brokers
 * Supported on Windows, Linux, OS X operating systems
 
-### Get the SDK
-
- [ Download .zip >][download] or use git
-
-    git clone https://github.com/marvell-iot/ez-connect-lite
 
 
-[download]: https://github.com/marvell-iot/ez-connect-lite/archive/master.zip
-
-
-## SoC Specs
+### SoC Specs
 
 * 32-bit Cortex M4F
 * Upto 200Mhz
@@ -42,21 +32,10 @@ EZ-Connect Lite is the SDK for Marvell Semiconductor's 88MW30x series of Wi-Fi m
 | Makerville Knit  |<a href="https://makerville.io/knit/" target="_blank" class="button">Buy Now</a>|
 
 
-## Documentation
-
-### [SDK Documentation](./docs)
-You can find instructions for everything right from setting up your development host to running your first application [here](./docs/)
 
 ###[API Reference](http://marvell-iot.github.io/aws_starter_sdk)
 Documentation about individual functions, classes, and so on.
 
-### Projects
-
-Here's a list of projects that people have made using the Marvell SDK.
-
-- <a href="https://www.hackster.io/cubot/cubled-79119f" target="_blank">CUBLED</a> - Control a 4x4x4 LED cube using AWS IoT
-- <a href="https://www.hackster.io/anujdeshpande/state-of-the-city-b81d85" target="_blank">State of the City</a> - Create a map with sensor data from different cloud connected sensors
-- More projects on <a href="https://www.hackster.io/marvell/projects" target="_blank">Hackster</a>
 
 ## Support
 

@@ -13,5 +13,5 @@
    * [AWS](aws.md)
    * [Alexa](alexa.md)
 * [FAQs](faqs.md)
-* Projects
+* [Projects](projects.md)
 

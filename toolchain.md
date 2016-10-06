@@ -2,7 +2,7 @@
 
 
 
-Apart from installing development OS specific drivers and packages, an ARM cross-compiler toolchain should be installed on the development host. The EZ-Connect Lite SDK supports the ARM GCC Compiler Toolchain.
+Apart from installing OS specific drivers and packages, an ARM cross-compiler toolchain should be installed on the development host. The EZ-Connect Lite SDK supports the ARM GCC Compiler Toolchain.
 
 The toolchain for GNU ARM is available from: https://launchpad.net/gcc-arm-embedded/+download
 
